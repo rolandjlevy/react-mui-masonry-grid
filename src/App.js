@@ -15,11 +15,17 @@ items = items.map(function (item) {
 });
 
 const breakpointColumnsObj = {
-  default: 4,
-  1100: 3,
-  700: 2,
-  500: 1
+  default: 3,
+  1280: 3,
+  960: 2,
+  600: 1
 };
+
+// xs: 0,
+// sm: 600,
+// md: 960,
+// lg: 1280,
+// xl: 1920,
 
 export default function App() {
   return (
