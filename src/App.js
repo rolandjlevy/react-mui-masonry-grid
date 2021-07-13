@@ -33,7 +33,7 @@ export default function App() {
 			<h3>Boring - Various</h3>
 		</section>
 		<section>
-			<h3>Countersinking & Counterbo...</h3>
+			<h3>Countersinking & Counterbores</h3>
 				<ul>
 					<li>Counterbores Solid</li>
 					<li>Countersinking & Counterboring Sets</li>
