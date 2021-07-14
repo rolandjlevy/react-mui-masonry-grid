@@ -11,7 +11,7 @@ body {
 .container {
   display: flex;
   width: auto;
-  margin: 10px;
+  margin: 0 10px;
 }
 
 .container-column {
@@ -20,11 +20,39 @@ body {
 }
 
 .container-column > section {
-  display: inline-block;
-  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
   width: 100%;
   border: 1px solid #ddd;
   padding: 15px;
+}
+
+.container-column > section > header {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-column > section > header > img {
+  margin: 0 auto 10px auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container-column > section > header > img {
+    margin: 0;
+    max-width: 30px;
+  }
+  .container-column > section > header > h3 {
+    margin-left: 10px;
+  }
+  .container-column > section > header {
+    flex-direction: row;
+    align-items: center;
+  }
+  .container-column > section > ul, 
+  .container-column > section > .toggle-link {
+    display: none;
+  }
 }
 
 ul {
