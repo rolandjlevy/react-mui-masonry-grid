@@ -1,18 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Masonry from "react-masonry-css";
 import "./index.css";
 
-let items = [
-  { id: 1, name: "one" },
-  { id: 2, name: "two" },
-  { id: 3, name: "three" },
-  { id: 4, name: "four" },
-  { id: 5, name: "five" }
-];
+// import { Collapse } from '@material-ui/core';
 
-items = items.map(function (item) {
-  return <div key={item.id}>{item.name}</div>;
-});
+console.log('111')
 
 const breakpointColumnsObj = {
   default: 3,
@@ -21,25 +13,21 @@ const breakpointColumnsObj = {
   600: 1
 };
 
-// xs: 0,
-// sm: 600,
-// md: 960,
-// lg: 1280,
-// xl: 1920,
-
 export default function App() {
+  const [checked1, setChecked1] = useState(true);
+  const [checked2, setChecked2] = useState(true);
   return (
     <div className="App">
       <Masonry
         breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >		
+        className="container"
+        columnClassName="container-column"
+      >
 		<section>
-			<h3>Boring - Various</h3>
+			<h3>1. Boring - Various</h3>
 		</section>
 		<section>
-			<h3>Countersinking & Counterbores</h3>
+			<h3>2. Countersinking & Counterbores</h3>
 				<ul>
 					<li>Counterbores Solid</li>
 					<li>Countersinking & Counterboring Sets</li>
@@ -48,7 +36,7 @@ export default function App() {
 				</ul>
 		</section>
 		<section>
-			<h3>Deburring</h3>
+			<h3>3. Deburring</h3>
 				<ul>
 					<li>Deburring Sets</li>
 					<li>Hand Deburring tools</li>
@@ -57,10 +45,32 @@ export default function App() {
 				</ul>
 		</section>
 		<section>
-			<h3>Drill bits - Various</h3>
+			<h3>4. Drill bits - Various</h3>
 		</section>
       <section>
-			<h3>Hole Making</h3>
+			<h3>5. Hole Making</h3>
+				<ul className={checked1 ? 'closed' : 'open'}>
+					<li>Carbide Drills</li>
+					<li>Drilling Inserts</li>
+					<li>Drill Sets</li>
+					<li>Drills - Various</li>
+					<li>Indexable Drill Bodies</li>
+					<li>Jobber Drills</li>
+					<li>Long Series Drills</li>
+					<li>Maintenance Drills</li>
+          <li>Replaceable Tip Drills</li>
+					<li>Specialist Drills</li>
+					<li>Spotting & Centre Drills</li>
+					<li>Stub Drills</li>
+					<li>Taper Shank Drills</li>
+				</ul>
+        <div className="toggle-link" onClick={() => setChecked1(prevState => !prevState)}>Show {checked1 ? 'more' : 'less'}</div>
+		</section>
+		<section>
+			<h3>6. Inserts - Various</h3>
+		</section>
+      <section>
+			<h3>7. Hole Making</h3>
 				<ul>
 					<li>Carbide Drills</li>
 					<li>Drilling Inserts</li>
@@ -70,7 +80,44 @@ export default function App() {
 				</ul>
 		</section>
 		<section>
-			<h3>Inserts - Various</h3>
+			<h3>8. Milling</h3>
+				<ul className={checked2 ? 'closed' : 'open'}>
+					<li>Ball Nose</li>
+					<li>Bore Milling</li>
+					<li>Die & Mould Indexable</li>
+					<li>Die & Mould Solid Carbide</li>
+					<li>End Mills</li>
+					<li>End Mills & Slot Drills - Various</li>
+					<li>Indexable Bodies</li>
+					<li>Key & Slot Cutters</li>
+					<li>Milling Inserts</li>
+					<li>Replaceable Head Milling Cutters</li>
+					<li>Roughing & Ripper Cutters</li>
+					<li>Slitting Saws</li>
+					<li>Slot Drills</li>
+					<li>Special Geometry Cutters</li>
+					<li>Throwaway Cutters</li>
+				</ul>
+        <div className="toggle-link" onClick={() => setChecked2(prevState => !prevState)}>Show {checked2 ? 'more' : 'less'}</div>
+		</section>
+		<section>
+			<h3>9. Parting & Grooving</h3>
+				<ul>
+					<li>Inserts & Blades</li>
+					<li>Square, Round & Rectangular Toolbits</li>
+					<li>Toolholders</li>
+					<li>Turning & Parting Toolholders</li>
+				</ul>
+		</section>
+		<section>
+			<h3>10. Precision Boring</h3>
+				<ul>
+					<li>Microbore Boring Systems</li>
+					<li>Pinzbohr Boring Replacement Parts & Spares</li>
+					<li>Pinzbohr Boring Systems</li>
+					<li>Pinzbohr Toolholding Accessories</li>
+					<li>Sandvik Coromant Boring System</li>
+				</ul>
 		</section>
       </Masonry>
     </div>
