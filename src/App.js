@@ -1,11 +1,11 @@
 import React from "react";
-import MasonryWithCss from "./MasonryWithCss";
-// // import MasonryWithMui from "./MasonryWithMui";
+// import MasonryWithCss from "./MasonryWithCss";
+import MasonryWithMui from "./MasonryWithMui";
 
 export default function App() {
   return (
     <div>
-      <MasonryWithCss />
+      <MasonryWithMui />
     </div>
   );
 }

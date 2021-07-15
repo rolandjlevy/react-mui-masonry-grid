@@ -12,9 +12,8 @@ const breakpointColumnsObj = {
 };
 
 export default function MasonryWithMui() {
-  const [checked1, setChecked1] = useState(true);
-  const [checked2, setChecked2] = useState(true);
-  const [checked3, setChecked3] = useState(false);
+  const [checked1, setChecked1] = useState(false);
+  const [checked2, setChecked2] = useState(false);
   return (
     <div>
       <Masonry
@@ -22,34 +21,6 @@ export default function MasonryWithMui() {
         className="container"
         columnClassName="container-column"
       >
-          <section>
-            <header>
-              <img src="https://via.placeholder.com/125" alt="placeholder" />
-              <h3>0. Collapse</h3>
-            </header>
-        <Collapse 
-          in={checked3}
-          collapsedSize={85}>
-            <ul>
-              <li>Ball Nose</li>
-              <li>Bore Milling</li>
-              <li>Die & Mould Indexable</li>
-              <li>Die & Mould Solid Carbide</li>
-              <li>End Mills</li>
-              <li>End Mills & Slot Drills - Various</li>
-              <li>Indexable Bodies</li>
-              <li>Key & Slot Cutters</li>
-              <li>Milling Inserts</li>
-              <li>Replaceable Head Milling Cutters</li>
-              <li>Roughing & Ripper Cutters</li>
-              <li>Slitting Saws</li>
-              <li>Slot Drills</li>
-              <li>Special Geometry Cutters</li>
-              <li>Throwaway Cutters</li>
-            </ul>
-        </Collapse>
-            <div className="toggle-link" onClick={() => setChecked3(prevState => !prevState)}>Show {checked3 ? 'less' : 'more'}</div>
-          </section>
         <section>
           <header>
             <img src="https://via.placeholder.com/125" alt="placeholder" />
@@ -91,7 +62,10 @@ export default function MasonryWithMui() {
             <img src="https://via.placeholder.com/125" alt="placeholder" />
             <h3>5. Hole Making</h3>
           </header>
-          <ul className={checked1 ? 'closed' : 'open'}>
+        <Collapse 
+          in={checked1}
+          collapsedSize={85}>
+            <ul>
             <li>Carbide Drills</li>
             <li>Drilling Inserts</li>
             <li>Drill Sets</li>
@@ -106,7 +80,8 @@ export default function MasonryWithMui() {
             <li>Stub Drills</li>
             <li>Taper Shank Drills</li>
           </ul>
-          <div className="toggle-link" onClick={() => setChecked1(prevState => !prevState)}>Show {checked1 ? 'more' : 'less'}</div>
+          </Collapse>
+            <div className="toggle-link" onClick={() => setChecked1(prevState => !prevState)}>Show {checked1 ? 'less' : 'more'}</div>
         </section>
         <section>
           <header>
@@ -128,29 +103,33 @@ export default function MasonryWithMui() {
           </ul>
         </section>
         <section>
-          <header>
-            <img src="https://via.placeholder.com/125" alt="placeholder" />
-            <h3>8. Milling</h3>
-          </header>
-          <ul className={checked2 ? 'closed' : 'open'}>
-            <li>Ball Nose</li>
-            <li>Bore Milling</li>
-            <li>Die & Mould Indexable</li>
-            <li>Die & Mould Solid Carbide</li>
-            <li>End Mills</li>
-            <li>End Mills & Slot Drills - Various</li>
-            <li>Indexable Bodies</li>
-            <li>Key & Slot Cutters</li>
-            <li>Milling Inserts</li>
-            <li>Replaceable Head Milling Cutters</li>
-            <li>Roughing & Ripper Cutters</li>
-            <li>Slitting Saws</li>
-            <li>Slot Drills</li>
-            <li>Special Geometry Cutters</li>
-            <li>Throwaway Cutters</li>
-          </ul>
-          <div className="toggle-link" onClick={() => setChecked2(prevState => !prevState)}>Show {checked2 ? 'more' : 'less'}</div>
-        </section>
+            <header>
+              <img src="https://via.placeholder.com/125" alt="placeholder" />
+              <h3>8. Milling</h3>
+            </header>
+        <Collapse 
+          in={checked2}
+          collapsedSize={85}>
+            <ul>
+              <li>Ball Nose</li>
+              <li>Bore Milling</li>
+              <li>Die & Mould Indexable</li>
+              <li>Die & Mould Solid Carbide</li>
+              <li>End Mills</li>
+              <li>End Mills & Slot Drills - Various</li>
+              <li>Indexable Bodies</li>
+              <li>Key & Slot Cutters</li>
+              <li>Milling Inserts</li>
+              <li>Replaceable Head Milling Cutters</li>
+              <li>Roughing & Ripper Cutters</li>
+              <li>Slitting Saws</li>
+              <li>Slot Drills</li>
+              <li>Special Geometry Cutters</li>
+              <li>Throwaway Cutters</li>
+            </ul>
+        </Collapse>
+            <div className="toggle-link" onClick={() => setChecked2(prevState => !prevState)}>Show {checked2 ? 'less' : 'more'}</div>
+          </section>
         <section>
           <header>
             <img src="https://via.placeholder.com/125" alt="placeholder" />
