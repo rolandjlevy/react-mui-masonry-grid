@@ -4,6 +4,8 @@ import "./index.css";
 
 import { Collapse } from '@material-ui/core';
 
+const collapsedSize = 85;
+
 const breakpointColumnsObj = {
   default: 3,
   1280: 3,
@@ -64,7 +66,7 @@ export default function MasonryWithMui() {
           </header>
         <Collapse 
           in={checked1}
-          collapsedSize={85}>
+          collapsedSize={collapsedSize}>
             <ul>
             <li>Carbide Drills</li>
             <li>Drilling Inserts</li>
@@ -109,7 +111,7 @@ export default function MasonryWithMui() {
             </header>
         <Collapse 
           in={checked2}
-          collapsedSize={85}>
+          collapsedSize={collapsedSize}>
             <ul>
               <li>Ball Nose</li>
               <li>Bore Milling</li>
